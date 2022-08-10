@@ -1,0 +1,54 @@
+[
+    {
+       "id": 1,
+       "tipo": "FIXAÇÃO",
+       "produto": "Soja",
+       "data": "11/12/2022 ás 15:59",
+       "preco": "1.946,55",
+       "volume": "1.946,55",
+       "vendedor": "Antonio Domingos Debastiane",
+       "idInterno": "Contrado123",
+       "carteira": "ComVendedor",
+       "dataEntrega": "13/04/22 até 13/05/22",
+       "status": "Confirmado"
+    },
+    {
+       "id": 2,
+       "tipo": "FIXAÇÃO",
+       "produto": "Soja em Grãos",
+       "data": "11/12/2022 ás 15:59",
+       "preco": "1.946,55",
+       "volume": "1.946,55",
+       "vendedor": "Cesar Filho dos Santos Vendedor",
+       "idInterno": "Contrado123",
+       "carteira": "Carteira Copagri",
+       "dataEntrega": "13/04/22 até 20/04/22",
+       "status": "Cancelado"
+    },
+    {
+       "id": 3,
+       "tipo": "COMPRA",
+       "produto": "Biodiesel",
+       "data": "11/12/2022 ás 15:59",
+       "preco": "1.946,55",
+       "volume": "1.946,55",
+       "vendedor": "Felipe Ferreira Santos",
+       "idInterno": "Contrado123",
+       "carteira": "Carteira Nova",
+       "dataEntrega": "13/04/22 até 13/05/22",
+       "status": "Cancelado"
+    },
+    {
+       "id": 4,
+       "tipo": "COMPRA",
+       "produto": "Biodiesel Refinado",
+       "data": "11/12/2022 ás 15:59",
+       "preco": "1.946,55",
+       "volume": "1.946,55",
+       "vendedor": "Samara Santos",
+       "idInterno": "Contrado123",
+       "carteira": "TestCard",
+       "dataEntrega": "13/04/22 até 19/05/22",
+       "status": "Confirmado"
+    }
+]
