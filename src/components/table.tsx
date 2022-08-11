@@ -5,7 +5,7 @@ import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
-import { Button, Checkbox, TableBody, Typography } from '@mui/material'
+import { Checkbox, TableBody } from '@mui/material'
 import Data from '../data/data.json'
 import ReceiptIcon from '@mui/icons-material/Receipt'
 
