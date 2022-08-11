@@ -9,12 +9,10 @@ import { Button, Checkbox, TableBody, Typography } from '@mui/material'
 import Data from '../data/data.json'
 import ReceiptIcon from '@mui/icons-material/Receipt'
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } }
-
 export default function DataTable() {
   return (
     <TableContainer component={Paper} sx={{ padding: '24px' }}>
-      <Table sx={{ minWidth: 650 }} size='small' aria-label='a dense table'>
+      <Table sx={{ minWidth: 650 }} size='medium' aria-label='a dense table'>
         <TableHead>
           <TableRow>
             <TableCell>Tipo / Produto</TableCell>
