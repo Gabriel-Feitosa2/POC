@@ -7,6 +7,7 @@ import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import Logo from '../asset/logo-merx.jpg'
+import { Divider } from '@mui/material'
 
 export default function Header() {
   return (
@@ -26,6 +27,7 @@ export default function Header() {
           </Typography>
           <Button color='inherit'>Login</Button>
         </Toolbar>
+        <Divider sx={{ backgroundColor: '#DEE1E6' }} />
       </AppBar>
     </Box>
   )

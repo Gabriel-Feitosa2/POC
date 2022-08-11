@@ -1,9 +1,9 @@
 import { Skeleton } from '@mui/material'
 import { Box } from '@mui/system'
 import { useEffect, useState } from 'react'
-import Carteiras from '../components/carteiras'
+import Filters from '../components/filters'
 import Header from '../components/header'
-import Historico from '../components/historico'
+import History from '../components/history'
 import TableEmpty from '../components/tableEmpty'
 
 function Home() {
@@ -35,7 +35,7 @@ function Home() {
             />
           </Box>
         ) : (
-          <Historico />
+          <History />
         )}
       </Box>
       <Box>
@@ -79,7 +79,7 @@ function Home() {
             />
           </Box>
         ) : (
-          <Carteiras />
+          <Filters />
         )}
       </Box>
       <Box>

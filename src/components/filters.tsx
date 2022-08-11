@@ -2,7 +2,7 @@ import { AppBar, Button, Toolbar, Typography } from '@mui/material'
 import FilterAltIcon from '@mui/icons-material/FilterAlt'
 import { Box } from '@mui/system'
 
-function Carteiras() {
+function Filters() {
   return (
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
       <AppBar position='static'>
@@ -28,4 +28,4 @@ function Carteiras() {
   )
 }
 
-export default Carteiras
+export default Filters
