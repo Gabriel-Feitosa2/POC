@@ -57,7 +57,6 @@ export default function TableEmpty() {
           </Box>
         </TableContainer>
       )}
-      {active === false && <DataTable />}
     </>
   )
 }

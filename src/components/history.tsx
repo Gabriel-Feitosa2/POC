@@ -9,7 +9,7 @@ import { IconButton } from '@mui/material'
 import FilterAltIcon from '@mui/icons-material/FilterAlt'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 
-export default function Historico() {
+export default function History() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static'>

@@ -1,4 +1,3 @@
-import * as React from 'react'
 import Table from '@mui/material/Table'
 import TableCell from '@mui/material/TableCell'
 import TableContainer from '@mui/material/TableContainer'
@@ -8,62 +7,36 @@ import Paper from '@mui/material/Paper'
 import { Checkbox, TableBody } from '@mui/material'
 import Data from '../data/data.json'
 import ReceiptIcon from '@mui/icons-material/Receipt'
+import { useEffect } from 'react'
 
-export default function DataTable() {
+interface Props {
+  colNames: { title: string; value: string }[]
+  list: any[]
+}
+
+export default function DataTable({ colNames, list }: Props) {
+  console.log(colNames)
+  console.log(list)
+
   return (
     <TableContainer component={Paper} sx={{ padding: '24px' }}>
       <Table sx={{ minWidth: 650 }} size='medium' aria-label='a dense table'>
         <TableHead>
           <TableRow>
-            <TableCell>Tipo / Produto</TableCell>
-            <TableCell>Data e Hora</TableCell>
-            <TableCell>Preço</TableCell>
-            <TableCell>Volume</TableCell>
-            <TableCell>Vendedor</TableCell>
-            <TableCell>ID Interno</TableCell>
-            <TableCell>Carteira</TableCell>
-            <TableCell>Data de entrega</TableCell>
-            <TableCell>Compliance</TableCell>
-            <TableCell>Comercial</TableCell>
-            <TableCell>Contratos</TableCell>
-            <TableCell>ADM</TableCell>
-            <TableCell>Status</TableCell>
-            <TableCell> Docs</TableCell>
+            {colNames.map((colNames, key) => (
+              <TableCell key={key}>{colNames.title}</TableCell>
+            ))}
           </TableRow>
         </TableHead>
         <TableBody>
-          {Data.map((post) => {
-            return (
-              <TableRow key={post.id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                <TableCell>
-                  {post.tipo} {post.produto}
-                </TableCell>
-                <TableCell>{post.data}</TableCell>
-                <TableCell>R$/sc{post.preco}</TableCell>
-                <TableCell>{post.volume} sacas</TableCell>
-                <TableCell>{post.vendedor}</TableCell>
-                <TableCell>{post.idInterno}</TableCell>
-                <TableCell>{post.carteira}</TableCell>
-                <TableCell>{post.dataEntrega}</TableCell>
-                <TableCell>
-                  <Checkbox color='success'></Checkbox>
-                </TableCell>
-                <TableCell>
-                  <Checkbox color='success'></Checkbox>
-                </TableCell>
-                <TableCell>
-                  <Checkbox sx={{ color: '#d32f2f' }}></Checkbox>
-                </TableCell>
-                <TableCell>
-                  <Checkbox></Checkbox>
-                </TableCell>
-                <TableCell>{post.status}</TableCell>
-                <TableCell>
-                  <ReceiptIcon />
-                </TableCell>
-              </TableRow>
-            )
-          })}
+          {list.map((item) => (
+            <TableRow key={item.id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+              {Object.values(colNames).map((col) => (
+                <TableCell key={col.value}>{item[col.value]}</TableCell>
+              ))}
+              ,
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
     </TableContainer>
