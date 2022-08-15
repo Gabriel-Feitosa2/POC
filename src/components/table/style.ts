@@ -7,12 +7,10 @@ export const Resposive = styled.div `
 			display: block;
             
 		}
-
-		/* Hide table headers (but not display: none;, for accessibility) */
+		
 		thead tr {
 			display: none
 		}
-
     tr {
       margin: 0 0 1rem 0;
       border-bottom: solid #BDBDBD 1px
@@ -21,27 +19,22 @@ export const Resposive = styled.div `
     tr:nth-child(odd) {}
     
 		td {
-			/* Behave  like a "row" */
+		
 			border: none;
 			position: relative;
 			padding-left: 50%;
 		}
-
 		td:before {
-			/* Now like a table header */
+			
 			position: absolute;
-			/* Top/left values mimic padding */
+			
 			top: 0;
 			left: 6px;
 			width: 45%;
 			padding-right: 10px;
 			white-space: nowrap;
 		}
-
-		/*
-		Label the data
-    You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
-		*/
+		
 		td:nth-of-type(1):before { content: "Produto"; }
 		td:nth-of-type(2):before { content: "Data"; }
 		td:nth-of-type(3):before { content: "Preço"; }
