@@ -9,7 +9,6 @@ import { Button, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import AddIcon from '@mui/icons-material/Add'
 import RefreshIcon from '@mui/icons-material/Refresh'
-import DataTable from './table'
 
 export default function TableEmpty() {
   const [active, setActive] = React.useState(true)
