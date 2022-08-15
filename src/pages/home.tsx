@@ -1,4 +1,4 @@
-import { Button, Checkbox } from '@mui/material'
+import { Button, Checkbox, Chip } from '@mui/material'
 import DataTable from '../components/table/table'
 
 function Home() {
@@ -58,17 +58,7 @@ function Home() {
       id: 1,
       tipo: (
         <>
-          <Button
-            size='small'
-            variant='contained'
-            sx={{
-              borderRadius: '25px',
-              color: '#1565C0',
-              backgroundColor: '#bbdefb',
-            }}
-          >
-            FIXAÇÃO
-          </Button>
+          <Chip label='Fixação' sx={{ backgroundColor: '#bbdefb', color: '#1565C0' }} />
           Soja
         </>
       ),
@@ -92,17 +82,13 @@ function Home() {
       id: 2,
       tipo: (
         <>
-          <Button
-            size='small'
-            variant='contained'
+          <Chip
+            label='Compra'
             sx={{
-              borderRadius: '25px',
               color: '#1b5e20',
               backgroundColor: '#c8e6c9',
             }}
-          >
-            Compra
-          </Button>
+          />
           Soja em Grãos
         </>
       ),
@@ -126,17 +112,13 @@ function Home() {
       id: 3,
       tipo: (
         <>
-          <Button
-            size='small'
-            variant='contained'
+          <Chip
+            label='Compra'
             sx={{
-              borderRadius: '25px',
               color: '#1b5e20',
               backgroundColor: '#c8e6c9',
             }}
-          >
-            Compra
-          </Button>
+          />
           Biodiesel
         </>
       ),
@@ -160,17 +142,13 @@ function Home() {
       id: 4,
       tipo: (
         <>
-          <Button
-            size='small'
-            variant='contained'
+          <Chip
+            label='Compra'
             sx={{
-              borderRadius: '25px',
               color: '#1b5e20',
               backgroundColor: '#c8e6c9',
             }}
-          >
-            Compra
-          </Button>
+          />
           Biodiesel Refinado
         </>
       ),
