@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 export const Resposive = styled.div `
+.teste {
+    width: 600px
+}
  @media only screen and (max-width: 900px) {
   table, thead, tbody, th, td, tr {
 			display: block;

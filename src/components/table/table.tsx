@@ -16,7 +16,7 @@ export default function DataTable({ colNames, list }: Props) {
   return (
     <Resposive>
       <TableContainer component={Paper} sx={{ padding: '24px' }}>
-        <Table sx={{ minWidth: 650 }} size='medium' aria-label='a dense table'>
+        <Table sx={{ minWidth: 400 }} size='medium' aria-label='a dense table'>
           <TableHead>
             <TableRow>
               {colNames.map((colNames, key) => (
@@ -28,7 +28,9 @@ export default function DataTable({ colNames, list }: Props) {
             {list.map((item) => (
               <TableRow key={item.id} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                 {Object.values(colNames).map((col) => (
-                  <TableCell key={col.value}>{item[col.value]}</TableCell>
+                  <TableCell className='teste' key={col.value}>
+                    {item[col.value]}
+                  </TableCell>
                 ))}
               </TableRow>
             ))}
