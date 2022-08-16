@@ -1,4 +1,6 @@
-import { Button, Checkbox, Chip } from '@mui/material'
+import { CheckBox } from '@mui/icons-material'
+import DisabledByDefaultIcon from '@mui/icons-material/DisabledByDefault'
+import { Button, Chip } from '@mui/material'
 import DataTable from '../components/table/table'
 
 function Home() {
@@ -69,9 +71,9 @@ function Home() {
       idInterno: 'Contrado123',
       carteira: 'ComVendedor',
       dataEntrega: '13/04/22 até 13/05/22',
-      compliance: <Checkbox />,
-      comercial: <Checkbox />,
-      contratos: <Checkbox />,
+      compliance: <CheckBox color='success' />,
+      comercial: <CheckBox color='success' />,
+      contratos: <CheckBox color='success' />,
       status: (
         <Button size='small' variant='contained' color='success' sx={{ borderRadius: '25px' }}>
           Confirmado
@@ -99,9 +101,9 @@ function Home() {
       idInterno: 'Contrado123',
       carteira: 'Carteira Copagri',
       dataEntrega: '13/04/22 até 20/04/22',
-      compliance: <Checkbox />,
-      comercial: <Checkbox />,
-      contratos: <Checkbox color='error' />,
+      compliance: <CheckBox color='success' />,
+      comercial: <CheckBox color='success' />,
+      contratos: <DisabledByDefaultIcon color='error' />,
       status: (
         <Button size='small' variant='contained' color='error' sx={{ borderRadius: '25px' }}>
           Cancelado
@@ -129,9 +131,9 @@ function Home() {
       idInterno: 'Contrado123',
       carteira: 'Carteira Nova',
       dataEntrega: '13/04/22 até 13/05/22',
-      compliance: <Checkbox />,
-      comercial: <Checkbox />,
-      contratos: <Checkbox color='error' />,
+      compliance: <CheckBox color='success' />,
+      comercial: <CheckBox color='success' />,
+      contratos: <DisabledByDefaultIcon color='error' />,
       status: (
         <Button size='small' variant='contained' color='error' sx={{ borderRadius: '25px' }}>
           Cancelado
@@ -159,9 +161,9 @@ function Home() {
       idInterno: 'Contrado123',
       carteira: 'TestCard',
       dataEntrega: '13/04/22 até 19/05/22',
-      compliance: <Checkbox />,
-      comercial: <Checkbox />,
-      contratos: <Checkbox />,
+      compliance: <CheckBox color='success' />,
+      comercial: <CheckBox color='success' />,
+      contratos: <CheckBox color='success' />,
       status: (
         <Button size='small' variant='contained' color='success' sx={{ borderRadius: '25px' }}>
           Confirmado
