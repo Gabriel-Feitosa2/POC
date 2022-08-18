@@ -1,19 +1,20 @@
 import styled from 'styled-components'
 
 export const Resposive = styled.div `
-.teste {
-    width: 600px
+td {
+    
 }
  @media only screen and (max-width: 900px) {
   table, thead, tbody, th, td, tr {
 			display: block;
             
+           
 		}
 		thead tr {
 			display: none
 		}
     tr {
-      margin: 0 0 1rem 0;
+      
       border-bottom: solid #BDBDBD 1px
     }
       
@@ -46,6 +47,8 @@ export const Resposive = styled.div `
 		td:nth-of-type(9):before { content: "Compliance"; }
 		td:nth-of-type(10):before { content: "Comercial"; }
         td:nth-of-type(11):before { content: "Contratos"; }
-        td:nth-of-type(12):before { content: "Status"; }
+        td:nth-of-type(12):before { content: "ADM"; }
+        td:nth-of-type(13):before { content: "DOCS"; }
+        td:nth-of-type(14):before { content: "Status"; }
 }
 `;

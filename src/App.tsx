@@ -1,10 +1,19 @@
 import Router from './routes'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#1a237e',
+    },
+  },
+})
 
 function App() {
   return (
-    <div className='App'>
+    <ThemeProvider theme={theme}>
       <Router />
-    </div>
+    </ThemeProvider>
   )
 }
 
