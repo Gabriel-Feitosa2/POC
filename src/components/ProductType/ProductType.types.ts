@@ -1,3 +1,5 @@
+export type OrderTypesProps = 'COMPRA' | 'VENDA' | 'FIXACAO'
+
 export type ProductTypeProps = {
-    type: "COMPRA" | "VENDA" | "FIXACAO"
+  type: OrderTypesProps
 }
