@@ -1,15 +1,9 @@
 // material
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-} from '@mui/material'
+import { TableBody, TableCell, TableHead, TableRow } from '@mui/material'
 
 // import ProductType from './ProductType'
+
+import { Table, TableContainer } from './styles'
 
 interface Props {
   colNames: { title: string; value: string }[]
@@ -22,8 +16,8 @@ function TableHistoryOfNegotiations({ colNames, rows }: Props) {
       {/* <ProductType type='COMPRA' />
         <ProductType type='VENDA' /> */}
 
-      <TableContainer component={Paper} sx={{ padding: '24px' }}>
-        <Table sx={{ minWidth: 400 }} size='medium' aria-label='a dense table'>
+      <TableContainer>
+        <Table aria-label='Histórico de Negociações'>
           <TableHead>
             <TableRow>
               {colNames.map((colNames) => (
@@ -50,4 +44,3 @@ function TableHistoryOfNegotiations({ colNames, rows }: Props) {
 }
 
 export default TableHistoryOfNegotiations
-

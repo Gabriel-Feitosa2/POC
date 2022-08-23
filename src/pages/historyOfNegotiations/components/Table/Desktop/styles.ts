@@ -1,17 +1,15 @@
+// libraries/frameworks
 import styled, { css } from 'styled-components'
-// import { styled } from '@mui/material/styles'
 
 // material
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer as TableContainerMUI,
-  TableHead,
-  TableRow,
-} from '@mui/material'
+import { Paper, Table as TableMUI, TableContainer as TableContainerMUI } from '@mui/material'
 
-export const TableContainer = styled(TableContainerMUI)`
-  ${({ theme }) => css``}
+export const Table = styled(TableMUI)``
+
+export const TableContainer = styled(TableContainerMUI).attrs(() => ({
+  component: Paper,
+}))`
+  ${({ theme }) => css`
+    padding: ${theme.spacing(3)};
+  `}
 `
