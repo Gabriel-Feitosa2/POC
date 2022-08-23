@@ -1,4 +1,4 @@
-import { OrderTypesProps } from '../../../../components/ProductType/ProductType.types'
+import { OrderTypesProps } from '~/components/ProductType/types'
 
 export type Columns =
   | 'type'

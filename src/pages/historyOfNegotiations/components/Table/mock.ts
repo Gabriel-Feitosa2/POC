@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import { OrderTypesProps } from '../../../../components/ProductType/ProductType.types'
+import { OrderTypesProps } from '~/components/ProductType/types'
 import {
   CurrencyProps,
   ProductProps,
@@ -7,7 +7,7 @@ import {
   StatusWorkflowProps,
   UnitProps,
   WalletProps,
-} from './Table.types'
+} from './types'
 
 const mock = [
   {

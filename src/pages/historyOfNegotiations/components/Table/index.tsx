@@ -5,7 +5,7 @@ import { useMediaQuery } from '@mui/material'
 import TableDesktop from './Desktop'
 import TableMobile from './Mobile'
 
-import { TableHistoryOfNegotiationsProps } from './Table.types'
+import { TableHistoryOfNegotiationsProps } from './types'
 
 function TableHistoryOfNegotiations({ columns, rows }: TableHistoryOfNegotiationsProps) {
   const isDesktop = useMediaQuery('(min-width:1133px)')

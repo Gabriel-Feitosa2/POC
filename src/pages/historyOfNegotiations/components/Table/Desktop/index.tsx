@@ -1,7 +1,7 @@
 // material
 import { TableBody, TableCell, TableHead, TableRow } from '@mui/material'
 
-import { RowsProps, TableHistoryOfNegotiationsProps } from '../Table.types'
+import { RowsProps, TableHistoryOfNegotiationsProps } from '../types'
 import { Table, TableContainer } from './styles'
 
 function TableHistoryOfNegotiations({ columns, rows }: TableHistoryOfNegotiationsProps) {
@@ -18,10 +18,7 @@ function TableHistoryOfNegotiations({ columns, rows }: TableHistoryOfNegotiation
         <TableBody>
           {rows.map((row: RowsProps) => {
             return (
-              <TableRow
-                key={row.order_id}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              >
+              <TableRow key={row.order_id}>
                 {columns.map((column) => {
                   return column.value !== 'wallets' ? (
                     <TableCell key={column.value}>{row[column.value]}</TableCell>

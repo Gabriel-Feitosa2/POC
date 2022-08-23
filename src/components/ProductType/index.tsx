@@ -1,7 +1,7 @@
 // types
-import { ProductTypeProps } from './ProductType.types'
+import { ProductTypeProps } from './types'
 
-import * as Styled from './ProductType.styles'
+import * as Styled from './styles'
 
 function ProductType({ type }: ProductTypeProps) {
   return <Styled.Chip label={type} />

@@ -1,4 +1,4 @@
-import { ColumnsProps } from './Table.types'
+import { ColumnsProps } from './types'
 
 const columns = [
   {
