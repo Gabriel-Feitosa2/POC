@@ -7,46 +7,18 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  useMediaQuery,
 } from '@mui/material'
 
-// import ProductType from './ProductType'
+// components
+import TableDesktop from './Desktop'
 
-interface Props {
-  colNames: { title: string; value: string }[]
-  rows: any[]
-}
+import { TableHistoryOfNegotiationsProps } from './Table.types'
 
-function TableHistoryOfNegotiations({ colNames, rows }: Props) {
-  return (
-    <>
-      {/* <ProductType type='COMPRA' />
-      <ProductType type='VENDA' /> */}
+function TableHistoryOfNegotiations({ colNames, rows }: TableHistoryOfNegotiationsProps) {
+  const isDesktop = useMediaQuery('(min-width:1133px)')
 
-      <TableContainer component={Paper} sx={{ padding: '24px' }}>
-        <Table sx={{ minWidth: 400 }} size='medium' aria-label='a dense table'>
-          <TableHead>
-            <TableRow>
-              {colNames.map((colNames) => (
-                <TableCell key={colNames.value}>{colNames.title}</TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((item) => (
-              <TableRow
-                key={item.order_id}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              >
-                {Object.values(colNames).map((col, index) => (
-                  <TableCell key={index}>{item[col.value]}</TableCell>
-                ))}
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </>
-  )
+  return isDesktop ? <TableDesktop colNames={colNames} rows={rows} /> : <>Mobile Version</>
 }
 
 export default TableHistoryOfNegotiations
