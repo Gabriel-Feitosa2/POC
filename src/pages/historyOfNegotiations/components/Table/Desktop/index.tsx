@@ -1,5 +1,6 @@
 // material
 import { TableBody, TableCell, TableHead, TableRow } from '@mui/material'
+import ChipProductType from '../../../../../components/ChipProductType'
 
 import { RowsProps, TableHistoryOfNegotiationsProps } from '../types'
 import { Table, TableContainer } from './styles'
@@ -20,15 +21,26 @@ function TableHistoryOfNegotiations({ columns, rows }: TableHistoryOfNegotiation
             return (
               <TableRow key={row.order_id}>
                 {columns.map((column) => {
-                  return column.value !== 'wallets' ? (
-                    <TableCell key={column.value}>{row[column.value]}</TableCell>
-                  ) : (
-                    <TableCell key={column.value}>
-                      {row[column.value].map((wallet) => (
-                        <span key={wallet.id}>{`${wallet.name}, `}</span>
-                      ))}
-                    </TableCell>
-                  )
+                  if (column.value === 'type') {
+                    return (
+                      <TableCell key={column.value}>
+                        <ChipProductType
+                          label={row[column.value]}
+                          productType={row[column.value]}
+                        />
+                      </TableCell>
+                    )
+                  } else if (column.value !== 'wallets') {
+                    return <TableCell key={column.value}>{row[column.value]}</TableCell>
+                  } else {
+                    return (
+                      <TableCell key={column.value}>
+                        {row[column.value].map((wallet) => (
+                          <span key={wallet.id}>{`${wallet.name}, `}</span>
+                        ))}
+                      </TableCell>
+                    )
+                  }
                 })}
               </TableRow>
             )

@@ -1,5 +1,5 @@
 /* eslint-disable camelcase */
-import { OrderTypesProps } from '~/components/ProductType/types'
+import { OrderTypesProps } from '~/components/ChipProductType/types'
 import {
   CurrencyProps,
   ProductProps,
