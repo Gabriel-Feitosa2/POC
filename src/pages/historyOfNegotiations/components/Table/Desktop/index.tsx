@@ -1,45 +1,44 @@
 // material
 import { TableBody, TableCell, TableHead, TableRow } from '@mui/material'
 
-// import ProductType from './ProductType'
-
+import { RowsProps, TableHistoryOfNegotiationsProps } from '../Table.types'
 import { Table, TableContainer } from './styles'
 
-interface Props {
-  colNames: { title: string; value: string }[]
-  rows: any[]
-}
-
-function TableHistoryOfNegotiations({ colNames, rows }: Props) {
+function TableHistoryOfNegotiations({ columns, rows }: TableHistoryOfNegotiationsProps) {
   return (
-    <>
-      {/* <ProductType type='COMPRA' />
-        <ProductType type='VENDA' /> */}
-
-      <TableContainer>
-        <Table aria-label='Histórico de Negociações'>
-          <TableHead>
-            <TableRow>
-              {colNames.map((colNames) => (
-                <TableCell key={colNames.value}>{colNames.title}</TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((item) => (
+    <TableContainer>
+      <Table aria-label='Histórico de Negociações'>
+        <TableHead>
+          <TableRow>
+            {columns.map((columns) => (
+              <TableCell key={columns.value}>{columns.title}</TableCell>
+            ))}
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row: RowsProps) => {
+            return (
               <TableRow
-                key={item.order_id}
+                key={row.order_id}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                {Object.values(colNames).map((col, index) => (
-                  <TableCell key={index}>{item[col.value]}</TableCell>
-                ))}
+                {columns.map((column) => {
+                  return column.value !== 'wallets' ? (
+                    <TableCell key={column.value}>{row[column.value]}</TableCell>
+                  ) : (
+                    <TableCell key={column.value}>
+                      {row[column.value].map((wallet) => (
+                        <span key={wallet.id}>{`${wallet.name}, `}</span>
+                      ))}
+                    </TableCell>
+                  )
+                })}
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </>
+            )
+          })}
+        </TableBody>
+      </Table>
+    </TableContainer>
   )
 }
 

@@ -1,13 +1,28 @@
 import { OrderTypesProps } from '../../../../components/ProductType/ProductType.types'
 
-type ColumnsProps = {
+export type Columns =
+  | 'type'
+  | 'initial_delivery_date'
+  | 'price'
+  | 'commitment_amount'
+  | 'producer_name'
+  | 'order_id'
+  | 'wallets'
+  | 'end_delivery_date'
+  | 'compliance_status'
+  | 'commercial_status'
+  | 'contracts_status'
+  | 'administrative_status'
+  | 'status'
+
+export type ColumnsProps = {
   title: string
-  value: string
+  value: Columns
 }
 
 export type StatusOrderProps = 'FULFILLED'
 
-export type StatusWorkflowProps = 'NEW'
+export type StatusWorkflowProps = 'NEW' | 'PENDING' | 'APPROVED' | 'REJECTED'
 
 export type WalletProps = {
   id: string

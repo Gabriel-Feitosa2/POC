@@ -7,10 +7,10 @@ import TableMobile from './Mobile'
 
 import { TableHistoryOfNegotiationsProps } from './Table.types'
 
-function TableHistoryOfNegotiations({ colNames, rows }: TableHistoryOfNegotiationsProps) {
+function TableHistoryOfNegotiations({ columns, rows }: TableHistoryOfNegotiationsProps) {
   const isDesktop = useMediaQuery('(min-width:1133px)')
 
-  return isDesktop ? <TableDesktop colNames={colNames} rows={rows} /> : <TableMobile />
+  return isDesktop ? <TableDesktop columns={columns} rows={rows} /> : <TableMobile />
 }
 
 export default TableHistoryOfNegotiations

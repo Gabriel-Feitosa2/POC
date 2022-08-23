@@ -2,11 +2,11 @@
 import DataTable from './components/Table'
 
 // mocks
-import columns from './components/Table/columns.json'
-import listOfRows from './components/Table/mock.json'
+import columns from './components/Table/columns'
+import listOfRows from './components/Table/mock'
 
 function Home() {
-  return <DataTable colNames={columns} rows={listOfRows} />
+  return <DataTable columns={columns} rows={listOfRows} />
 }
 
 export default Home
