@@ -16,8 +16,8 @@ export type Columns =
   | 'status'
 
 export type ColumnsProps = {
-  title: string
-  value: Columns
+  headerName: string
+  field: Columns
 }
 
 export type StatusOrderProps = 'FULFILLED'
