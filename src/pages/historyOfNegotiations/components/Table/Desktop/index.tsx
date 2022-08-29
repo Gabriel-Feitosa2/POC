@@ -9,6 +9,7 @@ function TableHistoryOfNegotiations({ columns, rows }: TableHistoryOfNegotiation
     <TableContainer>
       <DataGrid
         autoHeight
+        disableColumnMenu
         rowHeight={80}
         rows={rows}
         columns={columns}
