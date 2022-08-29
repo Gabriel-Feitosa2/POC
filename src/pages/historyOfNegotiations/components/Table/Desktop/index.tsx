@@ -2,12 +2,19 @@
 import { DataGrid } from '@mui/x-data-grid'
 
 import { TableHistoryOfNegotiationsProps } from '../types'
+import { TableContainer } from './styles'
 
 function TableHistoryOfNegotiations({ columns, rows }: TableHistoryOfNegotiationsProps) {
   return (
-    <div style={{ height: '50vh', width: '100%' }}>
-      <DataGrid rowHeight={80} rows={rows} columns={columns} getRowId={(r) => r.order_id} />
-    </div>
+    <TableContainer>
+      <DataGrid
+        autoHeight
+        rowHeight={80}
+        rows={rows}
+        columns={columns}
+        getRowId={(id) => id.order_id}
+      />
+    </TableContainer>
   )
 }
 
