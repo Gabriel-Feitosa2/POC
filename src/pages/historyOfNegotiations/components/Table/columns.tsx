@@ -8,6 +8,8 @@ const columns = [
     headerName: 'Tipo / Produto',
     field: 'type',
     width: '130',
+    align: 'center',
+    headerAlign: 'center',
     renderCell: (params: GridRenderCellParams) => (
       <div>
         <ChipProductType label={params.value} productType={params.value} />
@@ -57,6 +59,8 @@ const columns = [
     headerName: 'Compliance',
     field: 'compliance_status',
     flex: 1,
+    align: 'center',
+    headerAlign: 'center',
     renderCell: (params: GridRenderCellParams) => (
       <div>
         <CheckboxProductType productType={params.value} />
@@ -67,6 +71,8 @@ const columns = [
     headerName: 'Comercial',
     field: 'commercial_status',
     flex: 1,
+    align: 'center',
+    headerAlign: 'center',
     renderCell: (params: GridRenderCellParams) => (
       <div>
         <CheckboxProductType productType={params.value} />
@@ -77,6 +83,8 @@ const columns = [
     headerName: 'Contratos',
     field: 'contracts_status',
     flex: 1,
+    align: 'center',
+    headerAlign: 'center',
     renderCell: (params: GridRenderCellParams) => (
       <div>
         <CheckboxProductType productType={params.value} />
@@ -87,6 +95,8 @@ const columns = [
     headerName: 'ADM',
     field: 'administrative_status',
     flex: 1,
+    align: 'center',
+    headerAlign: 'center',
     renderCell: (params: GridRenderCellParams) => (
       <div>
         <CheckboxProductType productType={params.value} />
