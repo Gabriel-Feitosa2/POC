@@ -1,4 +1,5 @@
 import { OrderTypesProps } from '~/components/ChipProductType/types'
+import {StatusWorkflowProps} from '~/components/WorkflowStatus/types'
 
 export type Columns =
   | 'type'
@@ -22,7 +23,6 @@ export type ColumnsProps = {
 
 export type StatusOrderProps = 'FULFILLED'
 
-export type StatusWorkflowProps = 'NEW' | 'PENDING' | 'APPROVED' | 'REJECTED'
 
 export type WalletProps = {
   id: string

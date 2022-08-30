@@ -4,7 +4,7 @@ import { css } from 'styled-components'
 import { alpha, styled, Checkbox as CheckboxUI} from '@mui/material'
 import { Theme } from '@mui/material/styles'
 
-import { WorkflowProductTypeProps } from './type'
+import { WorkflowProductTypeProps } from './types'
 
 type WorkflowProps = Pick<WorkflowProductTypeProps, 'productType'>
 

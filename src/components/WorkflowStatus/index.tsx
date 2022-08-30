@@ -1,5 +1,5 @@
 // types
-import { WorkflowProductTypeProps } from './type'
+import { WorkflowProductTypeProps } from './types'
 
 import * as Styled from './styles'
 import {

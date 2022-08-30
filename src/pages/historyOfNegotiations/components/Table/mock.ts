@@ -1,10 +1,10 @@
 /* eslint-disable camelcase */
 import { OrderTypesProps } from '~/components/ChipProductType/types'
+import {StatusWorkflowProps} from '~/components/WorkflowStatus/types'
 import {
   CurrencyProps,
   ProductProps,
   StatusOrderProps,
-  StatusWorkflowProps,
   UnitProps,
   WalletProps,
 } from './types'
