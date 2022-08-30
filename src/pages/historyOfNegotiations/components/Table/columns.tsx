@@ -11,8 +11,9 @@ const columns = [
     align: 'center',
     headerAlign: 'center',
     renderCell: (params: GridRenderCellParams) => (
-      <div>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <ChipProductType label={params.value} productType={params.value} />
+        {params.row.product_code}
       </div>
     ),
   },
