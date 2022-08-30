@@ -1,4 +1,4 @@
-import { ColumnsProps, RowsProps } from './types'
+import { ColumnsProps, RowsProps, WalletProps } from './types'
 import { GridRenderCellParams } from '@mui/x-data-grid'
 import ChipProductType from '../../../../components/ChipProductType'
 import CheckboxProductType from '../../../../components/WorkflowStatus'
@@ -49,6 +49,8 @@ const columns = [
     headerName: 'Carteira',
     field: 'wallets',
     width: '140',
+    renderCell: (params: GridRenderCellParams) =>
+      params.value.map((wallet: WalletProps) => wallet.name).join(', '),
   },
   {
     headerName: 'Data de Entrega',
