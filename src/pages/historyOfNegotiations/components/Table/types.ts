@@ -1,5 +1,5 @@
 import { OrderTypesProps } from '~/components/ChipProductType/types'
-import {StatusWorkflowProps} from '~/components/WorkflowStatus/types'
+import { StatusWorkflowProps } from '~/components/WorkflowStatus/types'
 
 export type Columns =
   | 'type'
@@ -19,10 +19,10 @@ export type Columns =
 export type ColumnsProps = {
   headerName: string
   field: Columns
+  // width: string
 }
 
 export type StatusOrderProps = 'FULFILLED'
-
 
 export type WalletProps = {
   id: string

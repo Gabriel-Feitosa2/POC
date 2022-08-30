@@ -7,7 +7,7 @@ const columns = [
   {
     headerName: 'Tipo / Produto',
     field: 'type',
-    width: '140',
+    width: '130',
     renderCell: (params: GridRenderCellParams) => (
       <div>
         <ChipProductType label={params.value} productType={params.value} />
@@ -16,20 +16,20 @@ const columns = [
   },
   {
     headerName: 'Data',
-    width: '140',
+    width: '110',
     field: 'initial_delivery_date',
   },
   {
     headerName: 'Preço',
     field: 'price',
-    width: '140',
+    width: '90',
     valueGetter: (params: GridRenderCellParams) =>
       `${params.row.price || ''} ${params.row.currency_code || ''}`,
   },
   {
     headerName: 'Volume',
     field: 'commitment_amount',
-    width: '140',
+    width: '100',
     valueGetter: (params: GridRenderCellParams) =>
       `${params.row.commitment_amount || ''} ${params.row.unit_of_measurement_code || ''}`,
   },
@@ -41,7 +41,7 @@ const columns = [
   {
     headerName: 'idInterno',
     field: 'order_id',
-    width: '140',
+    width: '130',
   },
   {
     headerName: 'Carteira',
@@ -51,12 +51,12 @@ const columns = [
   {
     headerName: 'Data de Entrega',
     field: 'end_delivery_date',
-    width: '140',
+    width: '145',
   },
   {
     headerName: 'Compliance',
     field: 'compliance_status',
-    width: '140',
+    flex: 1,
     renderCell: (params: GridRenderCellParams) => (
       <div>
         <CheckboxProductType productType={params.value} />
@@ -66,7 +66,7 @@ const columns = [
   {
     headerName: 'Comercial',
     field: 'commercial_status',
-    width: '140',
+    flex: 1,
     renderCell: (params: GridRenderCellParams) => (
       <div>
         <CheckboxProductType productType={params.value} />
@@ -76,7 +76,7 @@ const columns = [
   {
     headerName: 'Contratos',
     field: 'contracts_status',
-    width: '140',
+    flex: 1,
     renderCell: (params: GridRenderCellParams) => (
       <div>
         <CheckboxProductType productType={params.value} />
@@ -86,7 +86,7 @@ const columns = [
   {
     headerName: 'ADM',
     field: 'administrative_status',
-    width: '140',
+    flex: 1,
     renderCell: (params: GridRenderCellParams) => (
       <div>
         <CheckboxProductType productType={params.value} />

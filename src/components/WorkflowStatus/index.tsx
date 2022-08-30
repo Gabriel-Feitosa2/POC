@@ -1,4 +1,9 @@
-import { CheckBoxOutlineBlank, CheckBox, Warning, DisabledByDefault } from '@mui/icons-material'
+import {
+  CheckBoxOutlineBlankOutlined,
+  CheckBox,
+  Warning,
+  DisabledByDefault,
+} from '@mui/icons-material'
 
 // types
 import { WorkflowProductTypeProps } from './types'
@@ -7,7 +12,7 @@ import * as Styled from './styles'
 
 const renderIcons = {
   APPROVED: <CheckBox />,
-  NEW: <CheckBoxOutlineBlank />,
+  NEW: <CheckBoxOutlineBlankOutlined />,
   PENDING: <Warning />,
   REJECTED: <DisabledByDefault />,
 }
