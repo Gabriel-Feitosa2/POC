@@ -1,10 +1,10 @@
 import { css } from 'styled-components'
 
 // material
-import { styled, Checkbox as CheckboxUI } from '@mui/material'
+import { styled } from '@mui/material'
 import { Theme } from '@mui/material/styles'
 
-import { SvgIcon } from '.'
+import { SvgIcon } from '../SvgIcon'
 
 import { WorkflowProductTypeProps } from './types'
 

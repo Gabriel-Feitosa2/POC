@@ -1,5 +1,4 @@
 import { CheckBoxOutlineBlank, CheckBox, Warning, DisabledByDefault } from '@mui/icons-material'
-import SvgIconMUI, { SvgIconProps } from '@mui/material/SvgIcon'
 
 // types
 import { WorkflowProductTypeProps } from './types'
@@ -13,14 +12,10 @@ const renderIcons = {
   REJECTED: <DisabledByDefault />,
 }
 
-export function SvgIcon(props: SvgIconProps) {
-  return <SvgIconMUI {...props}>{props.children}</SvgIconMUI>
-}
-
 function WorkflowStatus({ productType }: WorkflowProductTypeProps) {
   return (
     <Styled.WorkflowStatus productType={productType}>
-      <SvgIcon>{renderIcons[productType]}</SvgIcon>
+      {renderIcons[productType]}
     </Styled.WorkflowStatus>
   )
 }
