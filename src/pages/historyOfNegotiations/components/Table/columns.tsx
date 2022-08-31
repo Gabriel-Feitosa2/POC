@@ -1,4 +1,4 @@
-import { ColumnsProps, RowsProps, WalletProps } from './types'
+import { ColumnProps, WalletProps } from './types'
 import { GridRenderCellParams } from '@mui/x-data-grid'
 import ChipProductType from '../../../../components/ChipProductType'
 import CheckboxProductType from '../../../../components/WorkflowStatus'
@@ -110,6 +110,6 @@ const columns = [
     headerName: 'Status',
     field: 'status',
   },
-] as ColumnsProps[]
+] as ColumnProps[]
 
 export default columns

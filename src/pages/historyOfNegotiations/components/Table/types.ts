@@ -16,10 +16,9 @@ export type Columns =
   | 'administrative_status'
   | 'status'
 
-export type ColumnsProps = {
+export type ColumnProps = {
   headerName: string
   field: Columns
-  // width: string
 }
 
 export type StatusOrderProps = 'FULFILLED'
@@ -35,7 +34,7 @@ export type CurrencyProps = 'BRL' | 'USD'
 
 export type ProductProps = 'Soja' | 'Milho'
 
-export type RowsProps = {
+export type RowProps = {
   order_id: string
   price: string
   type: OrderTypesProps
@@ -54,7 +53,15 @@ export type RowsProps = {
   producer_name: string
 }
 
+export type LayoutProps = {
+  autoHeight?: boolean
+  disableColumnMenu?: boolean
+  getRowId: (row: RowProps) => string
+  rowHeight?: number
+}
+
 export type TableHistoryOfNegotiationsProps = {
-  columns: ColumnsProps[]
-  rows: RowsProps[]
+  columns: ColumnProps[]
+  rows: RowProps[]
+  layout?: LayoutProps
 }

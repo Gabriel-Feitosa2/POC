@@ -5,15 +5,11 @@ import { TableHistoryOfNegotiationsProps } from '../types'
 import { TableContainer } from './styles'
 
 function TableHistoryOfNegotiations(props: TableHistoryOfNegotiationsProps) {
+  const { layout } = props
+
   return (
     <TableContainer>
-      <DataGrid
-        autoHeight
-        disableColumnMenu
-        rowHeight={80}
-        {...props}
-        getRowId={(id) => id.order_id}
-      />
+      <DataGrid {...props} {...layout} />
     </TableContainer>
   )
 }
