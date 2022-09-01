@@ -1,3 +1,6 @@
+// types
+import { DataGridPropsTypes } from './types'
+
 // material
 import { useMediaQuery } from '@mui/material'
 
@@ -5,16 +8,11 @@ import { useMediaQuery } from '@mui/material'
 import TableDesktop from './Desktop'
 import TableMobile from './Mobile'
 
-import { TableHistoryOfNegotiationsProps } from './types'
-
-function TableHistoryOfNegotiations({ columns, rows, layout }: TableHistoryOfNegotiationsProps) {
+function TableHistoryOfNegotiations<T extends DataGridPropsTypes>(props: T) {
   const isDesktop = useMediaQuery('(min-width:1133px)')
+  const { layout } = props
 
-  return isDesktop ? (
-    <TableDesktop columns={columns} rows={rows} layout={layout} />
-  ) : (
-    <TableMobile />
-  )
+  return isDesktop ? <TableDesktop {...props} {...layout} /> : <TableMobile />
 }
 
 export default TableHistoryOfNegotiations

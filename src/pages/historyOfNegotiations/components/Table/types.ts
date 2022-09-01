@@ -1,5 +1,6 @@
 import { OrderTypesProps } from '~/components/ChipProductType/types'
 import { StatusWorkflowProps } from '~/components/WorkflowStatus/types'
+import { DataGridProps } from '@mui/x-data-grid/models/props/DataGridProps'
 
 export type Columns =
   | 'type'
@@ -65,3 +66,5 @@ export type TableHistoryOfNegotiationsProps = {
   rows: RowProps[]
   layout?: LayoutProps
 }
+
+export type DataGridPropsTypes = TableHistoryOfNegotiationsProps & DataGridProps
