@@ -1,7 +1,7 @@
 import { ColumnProps, WalletProps } from './types'
 import { GridRenderCellParams } from '@mui/x-data-grid'
-import ChipProductType from '../../../../components/ChipProductType'
-import CheckboxProductType from '../../../../components/WorkflowStatus'
+import ChipProductType from '../../components/ChipProductType'
+import CheckboxProductType from '../../components/WorkflowStatus'
 
 const columns = [
   {

@@ -1,14 +1,14 @@
 // types
-import { RowProps } from './components/Table/types'
+import { RowProps } from './types'
 
 // components
-import DataTable from './components/Table'
+import DataTable from '../../components/Table'
 
 import * as Styled from './styles'
 
 // mocks
-import columns from './components/Table/columns'
-import listOfRows from './components/Table/mock'
+import columns from './columns'
+import listOfRows from './mock'
 
 function Home() {
   return (
