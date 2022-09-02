@@ -1,13 +1,7 @@
 /* eslint-disable camelcase */
 import { OrderTypesProps } from '~/components/ChipProductType/types'
-import {StatusWorkflowProps} from '~/components/WorkflowStatus/types'
-import {
-  CurrencyProps,
-  ProductProps,
-  StatusOrderProps,
-  UnitProps,
-  WalletProps,
-} from './types'
+import { StatusWorkflowProps } from '~/components/WorkflowStatus/types'
+import { CurrencyProps, ProductProps, StatusOrderProps, UnitProps, WalletProps } from './types'
 
 const mock = [
   {

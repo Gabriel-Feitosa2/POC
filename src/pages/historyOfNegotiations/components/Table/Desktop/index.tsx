@@ -1,18 +1,16 @@
 // types
-import { DataGridPropsTypes } from '../types'
+import { TableProps } from '../types'
 
 // material
 import { DataGrid } from '@mui/x-data-grid'
 import { TableContainer } from './styles'
 
-function TableHistoryOfNegotiations<T extends DataGridPropsTypes>(props: T) {
-  const { layout } = props
-
+function TableDesktop<TypeColumns, TypeRows>(props: TableProps<TypeColumns, TypeRows>) {
   return (
     <TableContainer>
-      <DataGrid {...props} {...layout} />
+      <DataGrid {...props} />
     </TableContainer>
   )
 }
 
-export default TableHistoryOfNegotiations
+export default TableDesktop
