@@ -52,22 +52,3 @@ export type RowProps = {
   administrative_status: StatusWorkflowProps
   producer_name: string
 }
-
-export type RowProps2 = {
-  chaveUnica: string
-  price: string
-  type: OrderTypesProps
-  status: StatusOrderProps
-  product_code: ProductProps
-  currency_code: CurrencyProps
-  unit_of_measurement_code: UnitProps
-  commitment_amount: number
-  initial_delivery_date: string
-  end_delivery_date: string
-  wallets: WalletProps[]
-  compliance_status: StatusWorkflowProps
-  commercial_status: StatusWorkflowProps
-  contracts_status: StatusWorkflowProps
-  administrative_status: StatusWorkflowProps
-  producer_name: string
-}
