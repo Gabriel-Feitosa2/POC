@@ -1,5 +1,5 @@
 import { Skeleton } from '@mui/material'
-import { TableDesktopLoadingProps } from '../types'
+import { TableDesktopLoadingProps } from '../../types'
 
 function TableDesktopLoading<TypeColumns, TypeRows>({
   rows,

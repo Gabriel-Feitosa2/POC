@@ -2,7 +2,7 @@
 import { DataGrid } from '@mui/x-data-grid'
 
 // components
-import TableDesktopLoading from '../TableDesktopLoading/TableDesktopLoading'
+import TableDesktopLoading from './Skeleton/Skeleton'
 
 // types
 import { TableProps } from '../types'

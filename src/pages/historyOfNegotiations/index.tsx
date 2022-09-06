@@ -5,7 +5,7 @@ import { RowProps } from './types'
 import DataTable from '../../components/Table'
 
 // import TableSkeleton
-import TableDesktopLoading from '../../components/Table/TableDesktopLoading/TableDesktopLoading'
+import TableDesktopLoading from '../../components/Table/Desktop/Skeleton/Skeleton'
 
 import * as Styled from './styles'
 
