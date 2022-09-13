@@ -1,23 +1,48 @@
-import { Skeleton } from '@mui/material'
-import { TableDesktopLoadingProps } from '../../types'
+// import { TableDesktopLoadingProps } from '../../types'
 
-function TableDesktopLoading<TypeColumns, TypeRows>({
-  rows,
-  columns,
-}: TableDesktopLoadingProps<TypeColumns, TypeRows>) {
+import * as Styled from './styles'
+
+// import { SkeletonTableProps, TableProps } from '../../types'
+
+// skeletonLayout: SkeletonTableProps
+
+const Row = () => (
+  <Styled.TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+    <Styled.TableCell>
+      <Styled.Skeleton />
+    </Styled.TableCell>
+    <Styled.TableCell>
+      <Styled.Skeleton />
+    </Styled.TableCell>
+    <Styled.TableCell>
+      <Styled.Skeleton />
+    </Styled.TableCell>
+    <Styled.TableCell>
+      <Styled.Skeleton />
+    </Styled.TableCell>
+    <Styled.TableCell>
+      <Styled.Skeleton />
+    </Styled.TableCell>
+    <Styled.TableCell>
+      <Styled.Skeleton />
+    </Styled.TableCell>
+  </Styled.TableRow>
+)
+
+const Skeleton = () => {
   return (
-    <table>
-      {rows.map((rows: TypeRows, index: number) => (
-        <tr key={index}>
-          {columns.map((columns: TypeColumns, index: number) => (
-            <td key={index}>
-              <Skeleton width={150} height={32} />
-            </td>
-          ))}
-        </tr>
-      ))}
-    </table>
+    <Styled.Table>
+      <Styled.TableBody>
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+        <Row />
+      </Styled.TableBody>
+    </Styled.Table>
   )
 }
 
-export default TableDesktopLoading
+export default Skeleton

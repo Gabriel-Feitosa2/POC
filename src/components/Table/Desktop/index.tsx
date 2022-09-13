@@ -2,18 +2,33 @@
 import { DataGrid } from '@mui/x-data-grid'
 
 // components
-import TableDesktopLoading from './Skeleton/Skeleton'
+import Skeleton from './Skeleton/Skeleton'
+import Error from './Error/Error'
 
 // types
-import { TableProps } from '../types'
+import { TableProps, LoadingOrErrorTypes } from '../types'
 
 // style
 import * as Styled from './styles'
 
-function TableDesktop<TypeColumns, TypeRows>(props: TableProps<TypeColumns, TypeRows>) {
+const LoadingOrError = ({ error, loading, onError }: LoadingOrErrorTypes) => {
+  if (error) return <Error onError={onError} />
+
+  return loading && !error && <Skeleton />
+}
+
+function TableDesktop<TypeColumns, TypeRows, TypeSkeleton>(
+  props: TableProps<TypeColumns, TypeRows, TypeSkeleton>,
+) {
+  const { error, loading, onError } = props
+
   return (
     <Styled.TableContainer>
-      {props.loading ? <TableDesktopLoading {...props} /> : <DataGrid {...props} />}
+      {loading ? (
+        <LoadingOrError error={error} loading={loading} onError={onError} />
+      ) : (
+        <DataGrid {...props} />
+      )}
     </Styled.TableContainer>
   )
 }

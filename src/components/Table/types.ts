@@ -1,13 +1,25 @@
 import { DataGridProps } from '@mui/x-data-grid'
 
-export type TableProps<TypeColumns, TypeRows> = {
+export type SkeletonTableProps = {
+  columns: number
+  rows: number
+}
+
+export type TableProps<TypeColumns, TypeRows, TypeSkeleton> = {
   columns: TypeColumns[]
   loading: boolean
-  SkeletonCell: React.ReactNode
+  // SkeletonCell: React.ReactNode
   rows: TypeRows[]
+  skeletonLayout: TypeSkeleton
 } & DataGridProps
 
-export type TableDesktopLoadingProps<TypeColumns, TypeRows> = {
-  rows: TypeRows[]
-  columns: TypeColumns[]
+export type LoadingOrErrorTypes = {
+  error: boolean
+  loading: any
+  onError: any
 }
+
+// export type TableDesktopLoadingProps<TypeColumns, TypeRows> = {
+//   rows: TypeRows[]
+//   columns: TypeColumns[]
+// }

@@ -1,37 +1,43 @@
+import { useEffect, useState } from 'react'
+
 // types
 import { RowProps } from './types'
 
 // components
 import DataTable from '../../components/Table'
 
-// import TableSkeleton
-import TableDesktopLoading from '../../components/Table/Desktop/Skeleton/Skeleton'
-
 import * as Styled from './styles'
 
 // mocks
 import columns from './columns'
 import listOfRows from './mock'
-import { useEffect, useState } from 'react'
+
+const skeletonLayout = {
+  columns: 8,
+  rows: 6,
+}
 
 function Home() {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 2000)
+    }, 5000)
   }, [])
+
   return (
     <Styled.Container>
       <DataTable
-        columns={columns}
-        rows={listOfRows}
-        loading={loading}
         autoHeight
+        columns={columns}
         disableColumnMenu
+        // error={true}
+        onError={() => console.log('Tentando novamente')}
         getRowId={(row: RowProps) => row.order_id}
+        loading={loading}
+        rows={listOfRows}
         rowHeight={80}
-        SkeletonCell={<TableDesktopLoading columns={columns} rows={listOfRows} />}
+        skeletonLayout={skeletonLayout}
       />
     </Styled.Container>
   )
