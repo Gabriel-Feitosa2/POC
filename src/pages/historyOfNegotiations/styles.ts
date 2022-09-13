@@ -6,4 +6,3 @@ export const Container = styled.section`
     padding: ${theme.spacing(3)};
   `}
 `
-

@@ -9,7 +9,5 @@ export const Table = styled(TableMUI)``
 export const TableContainer = styled(TableContainerMUI).attrs(() => ({
   component: Paper,
 }))`
-  ${({ theme }) => css`
-    padding: ${theme.spacing(3)};
-  `}
+  padding: '2rem';
 `

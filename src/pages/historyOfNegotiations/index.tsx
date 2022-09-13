@@ -22,7 +22,7 @@ function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 5000)
+    }, 2000)
   }, [])
 
   return (
